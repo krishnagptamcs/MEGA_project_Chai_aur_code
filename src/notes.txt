@@ -1,0 +1,33 @@
+  <Input
+              label="Email"
+              placeholder="Enter you email id"
+              type="email"
+              {...register("email", {
+                required: true,
+                validate: {
+                  matchPatern: (value) =>
+                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                    "Email address must be a valid address",
+                },
+              })}
+            />
+
+// here {... register}--> is desturing the value for this input field only ,, if we don't destructure here then it gather all the input field value at once 
+
+// RegEx- regular expression , an expression(symbols, text etc), is used to match the creteria with input value , {email, number, etc} 
+
+validate: {
+                  matchPatern: (value) =>
+                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                    "Email address must be a valid address",
+                }, 
+
+                regex start with --> / and end with / all the entire symbols and value written inside this only and .test() this function is used to match with regex and containing value 
+
+
+
+ {...register ("email") ....}  here email represent the key and ...register represent the value 
+
+ like when an data create of form then ==>{
+  email:{...register} --> through this key and value made 
+ }             
