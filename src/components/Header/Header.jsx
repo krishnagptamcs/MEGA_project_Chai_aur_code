@@ -64,7 +64,7 @@ const Header = () => {
             )}
 
             {authStatus && (
-              <li> 
+              <li>
                 <LogoutButton />
               </li>
             )}
